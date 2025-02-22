@@ -107,7 +107,7 @@ namespace JokerOverVioletConfig
             // Set configuration options - obviously you don't need all of these, pick and choose what you need!
 
             // criFS
-            var mods = _modLoader.GetActiveMods();
+/*            var mods = _modLoader.GetActiveMods();
 
             var isRoseAndVioletActive = mods.Any(x => x.Generic.ModId == "p5rpc.kasumi.roseandviolet");
             _logger.WriteLine($"Is Rose and Violet Active? {isRoseAndVioletActive}", System.Drawing.Color.Magenta);
@@ -144,12 +144,12 @@ namespace JokerOverVioletConfig
                     _logger.WriteLine($"Character asset folder not found: {assetFolder}", System.Drawing.Color.Yellow);
                 }
             }
-
+*/
 
             // Darkened Face
-            if (_configuration.DarkenedFace)
+            if (_configuration.DarkenedFaceJoker)
             {
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Model", "DarkenedFace", "Characters", "Joker", "1");
+                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Model", "DarkenedFace", "Characters", "Sumire", "1");
 
                 if (Directory.Exists(assetFolder))
                 {
@@ -166,86 +166,9 @@ namespace JokerOverVioletConfig
             }
 
             // Blue Dress
-            if (_configuration.BlueDress)
+            if (_configuration.SkillsetJoker)
             {
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Model", "BlueDress", "Characters", "Joker", "1");
-
-                if (Directory.Exists(assetFolder))
-                {
-                    foreach (var file in Directory.EnumerateFiles(assetFolder, "*", SearchOption.AllDirectories))
-                    {
-                        var relativePath = Path.GetRelativePath(assetFolder, file);
-                        criFsApi.AddBind(file, relativePath, _modConfig.ModId);
-                    }
-                }
-                else
-                {
-                    _logger.WriteLine($"Character asset folder not found: {assetFolder}", System.Drawing.Color.Yellow);
-                }
-            }
-
-            // Black Tracksuit
-            if (_configuration.BlackTracksuit)
-            {
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Model", "OldTracksuit", "Characters", "Joker", "1");
-
-                if (Directory.Exists(assetFolder))
-                {
-                    foreach (var file in Directory.EnumerateFiles(assetFolder, "*", SearchOption.AllDirectories))
-                    {
-                        var relativePath = Path.GetRelativePath(assetFolder, file);
-                        criFsApi.AddBind(file, relativePath, _modConfig.ModId);
-                    }
-                }
-                else
-                {
-                    _logger.WriteLine($"Character asset folder not found: {assetFolder}", System.Drawing.Color.Yellow);
-                }
-            }
-
-            // Metaverse Field Run
-            if (_configuration.AltMetaRun)
-            {
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Animation", "AltMetaRun", "Characters", "Joker", "1");
-
-                if (Directory.Exists(assetFolder))
-                {
-                    foreach (var file in Directory.EnumerateFiles(assetFolder, "*", SearchOption.AllDirectories))
-                    {
-                        var relativePath = Path.GetRelativePath(assetFolder, file);
-                        criFsApi.AddBind(file, relativePath, _modConfig.ModId);
-                    }
-                }
-                else
-                {
-                    _logger.WriteLine($"Character asset folder not found: {assetFolder}", System.Drawing.Color.Yellow);
-                }
-            }
-
-            // Women's Bath House
-            if (_configuration.Bathhouse)
-            {
-                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "Flowscript", "Bath"));
-                _BfEmulator.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "Flowscript", "Bath", "BF"));
-            }
-
-            // Women's Bath House Event
-            if (_configuration.BathActivity)
-            {
-                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "Events", "Bath"));
-            }
-
-            // Shujin Restroom
-            if (_configuration.Restroom)
-            {
-                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "Flowscript", "Restroom"));
-                _BfEmulator.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "Flowscript", "Restroom", "BF"));
-            }
-
-            // criFS Bustup
-            if (_configuration.Bustup1)
-            {
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Bustup", "L7M3", "Characters", "Joker", "1");
+                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Skillset", "Characters", "Sumire", "1");
 
                 if (Directory.Exists(assetFolder))
                 {
