@@ -107,44 +107,11 @@ namespace JokerOverVioletConfig
             // Set configuration options - obviously you don't need all of these, pick and choose what you need!
 
             // criFS
-/*            var mods = _modLoader.GetActiveMods();
+            var mods = _modLoader.GetActiveMods();
 
-            var isRoseAndVioletActive = mods.Any(x => x.Generic.ModId == "p5rpc.kasumi.roseandviolet");
-            _logger.WriteLine($"Is Rose and Violet Active? {isRoseAndVioletActive}", System.Drawing.Color.Magenta);
+            var isKasumiProtagActive = mods.Any(x => x.Generic.ModId == "p5rpc.kasumiasprotag");
+            _logger.WriteLine($"Is Kasumi as Protagonist active? {isKasumiProtagActive}", System.Drawing.Color.Magenta);
 
-
-            if (isRoseAndVioletActive)
-            {
-                _logger.WriteLine($"Found Rose and Violet story overhaul, disabling event fixes to prevent conflicts.", System.Drawing.Color.Green);
-            }
-            else if (_configuration.EventEdits1)
-            {
-                criFsApi.AddProbingPath("OptionalModFiles\\Events\\Fixes");
-            }
-
-            if (isRoseAndVioletActive)
-            {
-                _logger.WriteLine($"Found Rose and Violet story overhaul, disabling major event edits to prevent conflicts.", System.Drawing.Color.Green);
-            }
-            else if (_configuration.EventEditsBig)
-            {
-                criFsApi.AddProbingPath("OptionalModFiles\\Events\\LargeEdits");
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Events", "LargeEdits", "Characters", "Joker", "1");
-
-                if (Directory.Exists(assetFolder))
-                {
-                    foreach (var file in Directory.EnumerateFiles(assetFolder, "*", SearchOption.AllDirectories))
-                    {
-                        var relativePath = Path.GetRelativePath(assetFolder, file);
-                        criFsApi.AddBind(file, relativePath, _modConfig.ModId);
-                    }
-                }
-                else
-                {
-                    _logger.WriteLine($"Character asset folder not found: {assetFolder}", System.Drawing.Color.Yellow);
-                }
-            }
-*/
 
             // Darkened Face
             if (_configuration.DarkenedFaceJoker)
@@ -165,11 +132,22 @@ namespace JokerOverVioletConfig
                 }
             }
 
-            // Blue Dress
-            if (_configuration.SkillsetJoker)
+            // Kasumi as Protag Compatibility
+            if (_configuration.ProtagSumiCompat || isKasumiProtagActive) // Automatically enables the config if the mod is found
             {
-                var assetFolder = Path.Combine(modDir, "OptionalModFiles", "Skillset", "Characters", "Sumire", "1");
+                if (!_configuration.ProtagSumiCompat && isKasumiProtagActive)
+                {
+                    _logger.WriteLine($"Kasumi as Protag detected, auto-enabling ProtagSumiCompat.", System.Drawing.Color.Green);
+                    _configuration.ProtagSumiCompat = true;
+                }
 
+                var assetFolders = new[]
+                {
+                    Path.Combine(modDir, "OptionalModFiles", "Compat", "ProtagSumi", "Characters", "Joker", "1"),
+                    Path.Combine(modDir, "OptionalModFiles", "Compat", "ProtagSumi", "Characters", "Sumire", "1")
+                };
+
+            foreach (var assetFolder in assetFolders)    
                 if (Directory.Exists(assetFolder))
                 {
                     foreach (var file in Directory.EnumerateFiles(assetFolder, "*", SearchOption.AllDirectories))
@@ -182,6 +160,17 @@ namespace JokerOverVioletConfig
                 {
                     _logger.WriteLine($"Character asset folder not found: {assetFolder}", System.Drawing.Color.Yellow);
                 }
+            }
+            else
+            {
+                _logger.WriteLine($"Kasumi as Protag mod not detected, ProtagSumiCompat remains disabled.", System.Drawing.Color.Yellow);
+            }
+
+
+            // Skillset
+            if (_configuration.SkillsetJoker)
+            {
+                criFsApi.AddProbingPath("OptionalModFiles\\Skillset");
             }
 
         }

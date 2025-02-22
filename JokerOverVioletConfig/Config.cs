@@ -35,11 +35,11 @@ namespace JokerOverVioletConfig.Configuration
         [DefaultValue(true)]
         public bool SkillsetJoker { get; set; } = true;
 
-        [Category("Animation")]
-        [DisplayName("placeholder")]
-        [Description("placeholder")]
+        [Category("Compatibility")]
+        [DisplayName("Kasumi as Protag Compatibility")]
+        [Description("Enables compatibility with Kasumi as Protag. This will be auto-enabled if Kasumi as Protag is enabled and if this mod is below it.")]
         [DefaultValue(false)]
-        public bool AltMetaRun { get; set; } = false;
+        public bool ProtagSumiCompat { get; set; } = false;
 
         [Category("Bustup")]
         [DisplayName("placeholder")]
