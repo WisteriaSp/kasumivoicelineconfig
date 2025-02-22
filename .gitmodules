@@ -1,12 +1,6 @@
-[submodule "Interfaces/FileEmulationFramework"]
-	path = Interfaces/FileEmulationFramework
-	url = https://github.com/Sewer56/FileEmulationFramework
 [submodule "Interfaces/CriFs.V2.Hook.ReloadedII"]
 	path = Interfaces/CriFs.V2.Hook.ReloadedII
-	url = https://github.com/Sewer56/CriFs.V2.Hook.ReloadedII
-[submodule "Interfaces/BGME"]
-	path = Interfaces/BGME
-	url = https://github.com/RyoTune/BGME
-[submodule "Interfaces/P5R.CostumeFramework"]
-	path = Interfaces/P5R.CostumeFramework
-	url = https://github.com/T-PoseRatkechi/P5R.CostumeFramework
+	url = https://github.com/Sewer56/CriFs.V2.Hook.ReloadedII.git
+[submodule "Interfaces/FileEmulationFramework"]
+	path = Interfaces/FileEmulationFramework
+	url = https://github.com/Sewer56/FileEmulationFramework.git
