@@ -1,7 +1,7 @@
-﻿using JokerOverVioletConfig.Configuration;
+﻿using KasumiVoicelineConfig.Configuration;
 using Reloaded.Mod.Interfaces;
 
-namespace JokerOverVioletConfig.Template.Configuration
+namespace KasumiVoicelineConfig.Template.Configuration
 {
 	public class Configurator : IConfiguratorV3
 	{

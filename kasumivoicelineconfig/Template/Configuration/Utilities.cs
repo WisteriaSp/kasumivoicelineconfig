@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace JokerOverVioletConfig.Template.Configuration
+namespace KasumiVoicelineConfig.Template.Configuration
 {
 	public class Utilities
 	{

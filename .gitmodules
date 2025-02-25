@@ -4,3 +4,7 @@
 [submodule "Interfaces/FileEmulationFramework"]
 	path = Interfaces/FileEmulationFramework
 	url = https://github.com/Sewer56/FileEmulationFramework.git
+[submodule "Interfaces/Ryo"]
+	path = Interfaces/Ryo
+	url = https://github.com/RyoTune/Ryo.git
+	branch = main

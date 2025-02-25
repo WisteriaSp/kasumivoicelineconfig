@@ -3,16 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jokerovervioletconfig", "JokerOverVioletConfig\jokerovervioletconfig.csproj", "{6C3C2BE9-6123-4D3D-B00C-FEB50E64684C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kasumivoicelineconfig", "kasumivoicelineconfig\kasumivoicelineconfig.csproj", "{6C3C2BE9-6123-4D3D-B00C-FEB50E64684C}"
 	ProjectSection(ProjectDependencies) = postProject
-		{61D5F706-5C22-42C6-94D9-8E1E7A2120D5} = {61D5F706-5C22-42C6-94D9-8E1E7A2120D5}
+		{743538F0-8228-4DDA-87E5-9B14180E922B} = {743538F0-8228-4DDA-87E5-9B14180E922B}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CriFs.V2.Hook.Interfaces", "Interfaces\CriFs.V2.Hook.ReloadedII\Interfaces\CriFs.V2.Hook.Interfaces\CriFs.V2.Hook.Interfaces.csproj", "{3FD83D1F-3089-44D3-B6A6-4B63800D89C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BF.File.Emulator.Interfaces", "Interfaces\FileEmulationFramework\Emulator\Interfaces\BF.File.Emulator.Interfaces\BF.File.Emulator.Interfaces.csproj", "{0F88B5A2-5E91-40F3-9F4D-239E469D2A2D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMD.File.Emulator.Interfaces", "Interfaces\FileEmulationFramework\Emulator\Interfaces\BMD.File.Emulator.Interfaces\BMD.File.Emulator.Interfaces.csproj", "{61D5F706-5C22-42C6-94D9-8E1E7A2120D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ryo.Interfaces", "Interfaces\Ryo\Ryo.Interfaces\Ryo.Interfaces.csproj", "{743538F0-8228-4DDA-87E5-9B14180E922B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,14 +26,10 @@ Global
 		{3FD83D1F-3089-44D3-B6A6-4B63800D89C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FD83D1F-3089-44D3-B6A6-4B63800D89C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FD83D1F-3089-44D3-B6A6-4B63800D89C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F88B5A2-5E91-40F3-9F4D-239E469D2A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F88B5A2-5E91-40F3-9F4D-239E469D2A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F88B5A2-5E91-40F3-9F4D-239E469D2A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F88B5A2-5E91-40F3-9F4D-239E469D2A2D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61D5F706-5C22-42C6-94D9-8E1E7A2120D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61D5F706-5C22-42C6-94D9-8E1E7A2120D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61D5F706-5C22-42C6-94D9-8E1E7A2120D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61D5F706-5C22-42C6-94D9-8E1E7A2120D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743538F0-8228-4DDA-87E5-9B14180E922B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743538F0-8228-4DDA-87E5-9B14180E922B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743538F0-8228-4DDA-87E5-9B14180E922B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743538F0-8228-4DDA-87E5-9B14180E922B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

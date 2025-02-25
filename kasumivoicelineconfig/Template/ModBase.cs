@@ -1,6 +1,6 @@
-﻿using JokerOverVioletConfig.Configuration;
+﻿using KasumiVoicelineConfig.Configuration;
 
-namespace JokerOverVioletConfig.Template
+namespace KasumiVoicelineConfig.Template
 {
 	/// <summary>
 	/// Base class for implementing mod functionality.

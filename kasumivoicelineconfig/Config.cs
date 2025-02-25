@@ -1,11 +1,11 @@
-﻿using JokerOverVioletConfig.Template.Configuration;
+﻿using KasumiVoicelineConfig.Template.Configuration;
 using Reloaded.Mod.Interfaces.Structs;
 using System.ComponentModel;
 using CriFs.V2.Hook;
 using CriFs.V2.Hook.Interfaces;
 using System.Reflection;
 
-namespace JokerOverVioletConfig.Configuration
+namespace KasumiVoicelineConfig.Configuration
 {
 	public class Config : Configurable<Config>
 	{
@@ -29,29 +29,17 @@ namespace JokerOverVioletConfig.Configuration
             The `DefaultValue` attribute is used as part of the `Reset` button in Reloaded-Launcher.
         */
 
-        [Category("Gameplay")]
-        [DisplayName("Full Skillset Edit")]
-        [Description("Adds proper skillsets for Arsene/Raoul/Satanael.")]
+        [Category("Audio")]
+        [DisplayName("Navi Patch")]
+        [Description("Futaba says Violet instead of Joker. Requires CBT.")]
         [DefaultValue(true)]
-        public bool SkillsetJoker { get; set; } = true;
+        public bool NaviPatch { get; set; } = true;
 
-        [Category("Compatibility")]
-        [DisplayName("Kasumi as Protag Compatibility")]
-        [Description("Enables compatibility with Kasumi as Protag. This will be auto-enabled if Kasumi as Protag is enabled and if this mod is below it.")]
-        [DefaultValue(false)]
-        public bool ProtagSumiCompat { get; set; } = false;
-
-        [Category("Bustup")]
-        [DisplayName("placeholder")]
-        [Description("placeholder")]
-        [DefaultValue(false)]
-        public bool Bustup1 { get; set; } = false;
-
-        [Category("Model")]
-        [DisplayName("Undarkened Face")]
-        [Description("Removes the face darkening when summoning a persona. Meant to be used with the No Darkened Faces mod, disable if you'd like.")]
+        [Category("Audio")]
+        [DisplayName("New Skill Comments")]
+        [Description("Adds Sumi lines for commenting when another party member unlocks a new skill. (eg: \"I'd love to see that in action!\")")]
         [DefaultValue(true)]
-        public bool DarkenedFaceJoker { get; set; } = true;
+        public bool Comments { get; set; } = true;
     }
 
     /// <summary>
@@ -59,7 +47,7 @@ namespace JokerOverVioletConfig.Configuration
     /// Override elements in <see cref="ConfiguratorMixinBase"/> for finer control.
     /// </summary>
 	public class ConfiguratorMixin : ConfiguratorMixinBase
-	{
-		// 
-	}
+    {
+        // 
+    }
 }

@@ -3,13 +3,13 @@
  * to make it easier to upgrade to newer versions of the template.
 */
 
-using JokerOverVioletConfig.Configuration;
-using JokerOverVioletConfig.Template.Configuration;
+using KasumiVoicelineConfig.Configuration;
+using KasumiVoicelineConfig.Template.Configuration;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
 
-namespace JokerOverVioletConfig.Template
+namespace KasumiVoicelineConfig.Template
 {
 	public class Startup : IMod
 	{
