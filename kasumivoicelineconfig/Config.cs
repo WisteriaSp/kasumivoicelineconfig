@@ -40,6 +40,12 @@ namespace KasumiVoicelineConfig.Configuration
         [Description("Adds Sumi lines for commenting when another party member unlocks a new skill. (eg: \"I'd love to see that in action!\")")]
         [DefaultValue(true)]
         public bool Comments { get; set; } = true;
+
+        [Category("Audio")]
+        [DisplayName("Persona Swap Audio")]
+        [Description("Replaces persona summoning lines and Arsene's voice to match Cendrillon/Vanadis/Ella, for use with the main mod's \"Violet's Personas\" config option.)")]
+        [DefaultValue(false)]
+        public bool PersonaSwapAudio { get; set; } = false;
     }
 
     /// <summary>

@@ -2,17 +2,17 @@
   "ModId": "p5rpc.kasumivoice",
   "ModName": "Kasumi Over Joker Voice Patch",
   "ModAuthor": "HappyGrinch08",
-  "ModVersion": "2.5",
+  "ModVersion": "3.0.3",
   "ModDescription": "This mod aims to replace as many of Joker\u0027s voice lines with Kasumi\u0027s as possible using Ryo Framework.",
   "ModDll": "kasumivoicelineconfig.dll",
-  "ModIcon": "",
+  "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "x86/kasumivoicelineconfig.dll",
   "ModR2RManagedDll64": "x64/kasumivoicelineconfig.dll",
   "ModNativeDll32": "",
   "ModNativeDll64": "",
   "Tags": [],
-  "CanUnload": null,
-  "HasExports": null,
+  "CanUnload": false,
+  "HasExports": false,
   "IsLibrary": false,
   "ReleaseMetadataFileName": "p5rpc.kasumivoice.ReleaseMetadata.json",
   "PluginData": {
@@ -27,15 +27,6 @@
           },
           "ReleaseMetadataName": "CriFs.V2.Hook.ReleaseMetadata.json"
         },
-        "CriFs.V2.Hook.Awb": {
-          "Config": {
-            "UserName": "Sewer56",
-            "RepositoryName": "CriFs.V2.Hook.ReloadedII",
-            "UseReleaseTag": false,
-            "AssetFileName": "Mod.zip"
-          },
-          "ReleaseMetadataName": "CriFs.V2.Hook.Awb.ReleaseMetadata.json"
-        },
         "p5rpc.modloader": {
           "Config": {
             "UserName": "Sewer56",
@@ -45,14 +36,14 @@
           },
           "ReleaseMetadataName": "p5rpc.modloader.ReleaseMetadata.json"
         },
-        "reloaded.universal.fileemulationframework.awb": {
+        "reloaded.sharedlib.hooks": {
           "Config": {
             "UserName": "Sewer56",
-            "RepositoryName": "FileEmulationFramework",
-            "UseReleaseTag": false,
-            "AssetFileName": "Mod.zip"
+            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
+            "UseReleaseTag": true,
+            "AssetFileName": "reloaded.sharedlib.hooks.zip"
           },
-          "ReleaseMetadataName": "AWB.Stream.Emulator.ReleaseMetadata.json"
+          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
         },
         "Ryo.Reloaded": {
           "Config": {
@@ -72,23 +63,14 @@
           },
           "ReleaseMetadataName": "Reloaded.Memory.SigScan.ReloadedII.ReleaseMetadata.json"
         },
-        "reloaded.sharedlib.hooks": {
+        "CriFs.V2.Hook.Awb": {
           "Config": {
             "UserName": "Sewer56",
-            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
-            "UseReleaseTag": true,
-            "AssetFileName": "reloaded.sharedlib.hooks.zip"
-          },
-          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
-        },
-        "reloaded.universal.fileemulationframework": {
-          "Config": {
-            "UserName": "Sewer56",
-            "RepositoryName": "FileEmulationFramework",
+            "RepositoryName": "CriFs.V2.Hook.ReloadedII",
             "UseReleaseTag": false,
             "AssetFileName": "Mod.zip"
           },
-          "ReleaseMetadataName": "Reloaded.Universal.FileEmulationFramework.ReleaseMetadata.json"
+          "ReleaseMetadataName": "CriFs.V2.Hook.Awb.ReleaseMetadata.json"
         },
         "reloaded.universal.fileemulationframework.pak": {
           "Config": {
@@ -126,6 +108,24 @@
           },
           "ReleaseMetadataName": "SPD.File.Emulator.ReleaseMetadata.json"
         },
+        "reloaded.universal.fileemulationframework.awb": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "FileEmulationFramework",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "AWB.Stream.Emulator.ReleaseMetadata.json"
+        },
+        "reloaded.universal.fileemulationframework": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "FileEmulationFramework",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "Reloaded.Universal.FileEmulationFramework.ReleaseMetadata.json"
+        },
         "SharedScans.Reloaded": {
           "Config": {
             "UserName": "RyoTune",
@@ -153,6 +153,5 @@
   "SupportedAppId": [
     "p5r.exe"
   ],
-  "ProjectUrl": "",
-  "CreatorUrl": ""
+  "ProjectUrl": ""
 }

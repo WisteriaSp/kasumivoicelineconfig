@@ -91,7 +91,13 @@ namespace KasumiVoicelineConfig
                 var audioFolder = Path.Combine(modDir, "OptionalModFiles", "Audio", "NewSkill");
                 if (Directory.Exists(audioFolder))
                     ryo.AddAudioPath(audioFolder, null);
-                    _logger.WriteLine($"Comment config loaded!", System.Drawing.Color.Purple);
+            }
+
+            if (_configuration.PersonaSwapAudio)
+            {
+                var audioFolder = Path.Combine(modDir, "OptionalModFiles", "Audio", "PersonaSwap");
+                if (Directory.Exists(audioFolder))
+                    ryo.AddAudioPath(audioFolder, null);
             }
 
         }
